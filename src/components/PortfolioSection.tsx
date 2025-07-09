@@ -18,7 +18,7 @@ const PortfolioSection = () => {
       title: "Kitchen Website", 
       category: "Babe and Bloom",
       image: "/photos/babeandbloom.png",
-      description: "Complete grocery platform with real-time inventory, delivery tracking, customer portal, and Google Maps integrationm",
+      description: "Complete grocery platform with real-time inventory, delivery tracking, customer portal, and Google Maps integration",
       technologies: ["Next.js", "Delivery System", "Inventory", "Customer Portal"],
       achievement: "50% faster order processing",
       liveUrl: "https://babeandbloom.netlify.app/" // Replace with your actual project URL
