@@ -11,7 +11,7 @@ const PortfolioSection = () => {
       image: "/photos/worldofperfume.png",
       description: "Elegant online store with product catalog, wishlist functionality, WhatsApp ordering, and integrated payment system",
       technologies: ["React", "E-commerce", "WhatsApp", "Mobile-Responsive"],
-      achievement: "Increased online orders by 300%",
+      achievement: "Increased online orders by 70%",
       liveUrl: "https://worldofperfume.store/?fbclid=PAZXh0bgNhZW0CMTEAAacj5x4EzfFTfMOs9vGesjOC9MPdlHknSUp7Lo6XW2-gBrKppikaOo33Rxj8GQ_aem_cvKd-uiITncQiL2B7PThig" // Replace with your actual project URL
     },
     {
@@ -31,7 +31,16 @@ const PortfolioSection = () => {
       technologies: ["React", "Booking System", "Product Gallery", "Luxury Design"],
       achievement: "Doubled appointment bookings",
       liveUrl: "https://dashing-dragon-545a05.netlify.app/" // Replace with your actual project URL
-    }
+    },{
+        title: "Restaurant Website Coming Soon..",
+        category: "The DogFather",
+        image: "/photos/thedogfather.png",
+        description: "Modern and inviting restaurant website featuring online reservations, dynamic menu display, and customer testimonials.",
+        technologies: ["React", "Online Reservations", "Menu Showcase", "Responsive Design"],
+        achievement: "Increased sales rate by 35%",
+        liveUrl: "https://tubular-fenglisu-b5f562.netlify.app/" // Replace with your actual project URL
+}
+
   ];
 
   const handleViewProject = (url: string) => {
