@@ -47,7 +47,7 @@ const HeroSection = () => {
               size="lg" 
               variant="outline"
               onClick={scrollToPortfolio}
-              className="text-lg px-8 py-6 border-2 border-gray-600 text-white hover:bg-gray-800 hover:border-gray-500 transform hover:scale-105 transition-all duration-300"
+              className="text-lg px-8 py-6 bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl text-white border-0"
             >
               See My Work
             </Button>

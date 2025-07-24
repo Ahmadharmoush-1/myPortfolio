@@ -33,13 +33,22 @@ const PortfolioSection = () => {
       liveUrl: "https://dashing-dragon-545a05.netlify.app/" // Replace with your actual project URL
     },{
         title: "Restaurant Website Coming Soon..",
-        category: "The DogFather",
-        image: "/photos/thedogfather.png",
+        category: "TheNosh",
+        image: "/photos/thenosh.png",
         description: "Modern and inviting restaurant website featuring online reservations, dynamic menu display, and customer testimonials.",
         technologies: ["React", "Online Reservations", "Menu Showcase", "Responsive Design"],
-        achievement: "Increased sales rate by 35%",
-        liveUrl: "https://tubular-fenglisu-b5f562.netlify.app/" // Replace with your actual project URL
+        achievement: "Increased sales rate by 45%",
+        liveUrl: "https://thenosh.netlify.app/" // Replace with your actual project URL
+      },{
+  title: "Padel Website Coming Soon..",
+  category: "Padel Club",
+  image: "/photos/padel.png",
+  description: "A sleek and user-friendly website for a modern padel club, featuring court booking, schedules, and contact information to enhance player experience.",
+  technologies: ["React", "Online Reservations", "Schedule Display", "Responsive Design"],
+  achievement: "Increased sales rate by 45%",
+  liveUrl: "https://padell.netlify.app/" // Replace with your actual project URL
 }
+
 
   ];
 
