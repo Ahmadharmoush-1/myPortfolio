@@ -52,7 +52,7 @@ const PortfolioSection = () => {
   category: "Academy Club",
   image: "/photos/ksa.jpg",
   description: "A platform where users can register, view class schedules, and make secure online payments — all in one place..",
-  technologies: ["React", "Online Reservations", "Schedule Display", "Responsive Design"],
+  technologies: ["React", "Online Reservation", "Schedule Display", "Responsive Design"],
   // achievement: "Increased sales rate by 45%",
   liveUrl: "https://ksaacademy.netlify.app/" // Replace with your actual project URL
 }
