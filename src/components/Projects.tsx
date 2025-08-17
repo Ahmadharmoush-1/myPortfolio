@@ -8,56 +8,57 @@ import project5 from '@/assets/project-5.jpg';
 import project6 from '@/assets/project-6.jpg';
 const Projects = () => {
   const projects = [
-    {
-      id: 1,
-      title: 'World Of Perfume - Fragrance E-commerce',
-      description: 'A modern e-commerce solution with advanced filtering. Built with React.',
-      image: project2,
-      technologies: ['React', 'TypeScript', 'Tailwind CSS'],
-      liveUrl: 'https://worldofperfume.store/',
-      githubUrl: 'https://github.com/Ahmadharmoush-1/WorldofPerfume',
-      featured: true
-    },
-    {
-      id: 2,
-      title: 'TheNosh - Restaurant Web App',
-      description: 'Secure mobile banking application with real-time transactions, budget tracking, and financial analytics.',
-      image: project1,
-      technologies: ['React Native', 'TypeScript',],
-      liveUrl: 'https://www.thenoshrealfood.com/',
-      githubUrl: 'https://github.com/Ahmadharmoush-1/TheNosh',
-      featured: true
-    },
-    {
-      id: 3,
-      title: 'BabeAndBloom',
-      description: 'Collaborative project management platform with kanban boards, team chat, and progress tracking.',
-      image: project4,
-      technologies: ['Vue.js', 'React Native', 'TypeScript'],
-      liveUrl: 'https://babeandbloom.netlify.app/',
-      githubUrl: 'https://github.com/Ahmadharmoush-1/babeandbloom',
-      featured: false
-    },
-    {
-      id: 4,
-      title: 'MagicDesign - Aluminum Portfolio',
-      description: 'Collaborative project management platform with kanban boards, team chat, and progress tracking.',
-      image: project5,
-      technologies: ['Vue.js', 'React Native', 'TypeScript'],
-      liveUrl: 'https://magicdesignn.netlify.app/',
-      githubUrl: 'https://github.com/Ahmadharmoush-1/MagicDesign',
-      featured: false
-    },
-    {
-      id: 4,
-      title: 'Padel',
-      description: 'Collaborative project management platform with kanban boards, team chat, and progress tracking.',
-      image: project6,
-      technologies: ['Vue.js', 'React Native', 'TypeScript'],
-      liveUrl: 'https://padell.netlify.app/',
-      githubUrl: 'https://github.com/Ahmadharmoush-1/Padel',
-      featured: false
-    }
+   {
+  id: 1,
+  title: 'World Of Perfume - Fragrance E-commerce',
+  description: 'A complete fragrance e-commerce platform featuring product catalog, advanced filtering, and a modern shopping experience.',
+  image: project2,
+  technologies: ['React', 'TypeScript', 'Tailwind CSS'],
+  liveUrl: 'https://worldofperfume.store/',
+  githubUrl: 'https://github.com/Ahmadharmoush-1/WorldofPerfume',
+  featured: true
+},
+{
+  id: 2,
+  title: 'TheNosh - Restaurant Web App',
+  description: 'A restaurant website with online menu display, table reservations, and a seamless user experience.',
+  image: project1,
+  technologies: ['React Native', 'TypeScript'],
+  liveUrl: 'https://www.thenoshrealfood.com/',
+  githubUrl: 'https://github.com/Ahmadharmoush-1/TheNosh',
+  featured: true
+},
+{
+  id: 3,
+  title: 'BabeAndBloom',
+  description: 'An elegant e-commerce platform for baby and beauty products, showcasing a clean design and smooth shopping experience.',
+  image: project4,
+  technologies: ['Vue.js', 'React Native', 'TypeScript'],
+  liveUrl: 'https://babeandbloom.netlify.app/',
+  githubUrl: 'https://github.com/Ahmadharmoush-1/babeandbloom',
+  featured: false
+},
+{
+  id: 4,
+  title: 'MagicDesign - Aluminum Portfolio',
+  description: 'A professional portfolio website for an aluminum design business, highlighting projects and services in a modern layout.',
+  image: project5,
+  technologies: ['Vue.js', 'React Native', 'TypeScript'],
+  liveUrl: 'https://magicdesignn.netlify.app/',
+  githubUrl: 'https://github.com/Ahmadharmoush-1/MagicDesign',
+  featured: false
+},
+{
+  id: 5,
+  title: 'Padel',
+  description: 'A padel court website featuring reservations, club details, and a modern sports design.',
+  image: project6,
+  technologies: ['Vue.js', 'React Native', 'TypeScript'],
+  liveUrl: 'https://padell.netlify.app/',
+  githubUrl: 'https://github.com/Ahmadharmoush-1/Padel',
+  featured: false
+}
+
   ];
 
   return (

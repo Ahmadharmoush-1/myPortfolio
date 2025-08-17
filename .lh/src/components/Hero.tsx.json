@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 10,
+            "activePatchIndex": 14,
             "patches": [
                 {
                     "date": 1755431694942,
@@ -48,6 +48,22 @@
                 {
                     "date": 1755436556080,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n     <section id=\"home\" className=\"min-h-screen flex items-center justify-center relative overflow-hidden\">\r\n       {/* Background */}\r\n      <div\r\n   className=\"absolute inset-0 bg-cover bg-center bg-no-repeat\"\r\n-  style={{ backgroundImage: \"url('C:\\Users\\GamingCorner\\Desktop\\code\\myportfolio\\src\\assets\\hero-bg.jpg')\" }}\r\n+  style={{ backgroundImage: \"url('/assets/hero-bg.jpg')\" }}\r\n />\r\n \r\n       <div className=\"absolute inset-0 bg-gradient-to-br from-background/80 via-background/60 to-background/40\" />\r\n       \r\n"
+                },
+                {
+                    "date": 1755439574796,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n     <section id=\"home\" className=\"min-h-screen flex items-center justify-center relative overflow-hidden\">\r\n       {/* Background */}\r\n      <div\r\n   className=\"absolute inset-0 bg-cover bg-center bg-no-repeat\"\r\n-  style={{ backgroundImage: \"url('/assets/hero-bg.jpg')\" }}\r\n+  style={{ backgroundImage: \"url('C:\\Users\\GamingCorner\\Desktop\\code\\myportfolio\\public\\photos\\hero-bg.jpg')\" }}\r\n />\r\n \r\n       <div className=\"absolute inset-0 bg-gradient-to-br from-background/80 via-background/60 to-background/40\" />\r\n       \r\n"
+                },
+                {
+                    "date": 1755439582397,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n     <section id=\"home\" className=\"min-h-screen flex items-center justify-center relative overflow-hidden\">\r\n       {/* Background */}\r\n      <div\r\n   className=\"absolute inset-0 bg-cover bg-center bg-no-repeat\"\r\n-  style={{ backgroundImage: \"url('C:\\Users\\GamingCorner\\Desktop\\code\\myportfolio\\public\\photos\\hero-bg.jpg')\" }}\r\n+  style={{ backgroundImage: \"url('/photos\\hero-bg.jpg')\" }}\r\n />\r\n \r\n       <div className=\"absolute inset-0 bg-gradient-to-br from-background/80 via-background/60 to-background/40\" />\r\n       \r\n"
+                },
+                {
+                    "date": 1755439741760,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n     <section id=\"home\" className=\"min-h-screen flex items-center justify-center relative overflow-hidden\">\r\n       {/* Background */}\r\n      <div\r\n   className=\"absolute inset-0 bg-cover bg-center bg-no-repeat\"\r\n-  style={{ backgroundImage: \"url('/photos\\hero-bg.jpg')\" }}\r\n+  style={{ backgroundImage: \"url('C:\\Users\\GamingCorner\\Desktop\\code\\myportfolio\\public\\photos\\background.jpg')\" }}\r\n />\r\n \r\n       <div className=\"absolute inset-0 bg-gradient-to-br from-background/80 via-background/60 to-background/40\" />\r\n       \r\n"
+                },
+                {
+                    "date": 1755439746924,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n     <section id=\"home\" className=\"min-h-screen flex items-center justify-center relative overflow-hidden\">\r\n       {/* Background */}\r\n      <div\r\n   className=\"absolute inset-0 bg-cover bg-center bg-no-repeat\"\r\n-  style={{ backgroundImage: \"url('C:\\Users\\GamingCorner\\Desktop\\code\\myportfolio\\public\\photos\\background.jpg')\" }}\r\n+  style={{ backgroundImage: \"url('/photos\\background.jpg')\" }}\r\n />\r\n \r\n       <div className=\"absolute inset-0 bg-gradient-to-br from-background/80 via-background/60 to-background/40\" />\r\n       \r\n"
                 }
             ],
             "date": 1755431694942,
