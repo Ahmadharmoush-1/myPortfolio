@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -33,27 +32,13 @@ const Navigation = () => {
   };
 
   return (
-    <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-background/90 backdrop-blur-md border-b border-border'
-          : 'bg-transparent'
-      }`}
-    >
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+      isScrolled ? 'bg-background/90 backdrop-blur-md border-b border-border' : 'bg-transparent'
+    }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo + Name */}
-          <div className="flex items-center gap-3">
-            <img
-              src="/photos/logo.png"
-              alt="Ahmad Harmoush Logo"
-              width={65}
-              height={65}
-              className="rounded-full border border-gray-300 shadow-sm"
-            />
-            {/* <span className="font-heading font-semibold text-lg sm:text-xl">
-              Ahmad Harmoush
-            </span> */}
+          <div className="font-heading font-semibold text-xl">
+            Portfolio
           </div>
 
           {/* Desktop Navigation */}
@@ -62,7 +47,7 @@ const Navigation = () => {
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
+                className="nav-link text-foreground hover:text-primary transition-all duration-300 font-medium py-2 hover:scale-105"
               >
                 {item.label}
               </button>
@@ -71,7 +56,11 @@ const Navigation = () => {
 
           {/* Mobile Navigation Button */}
           <div className="md:hidden">
-            <Button variant="ghost" size="sm" onClick={() => setIsOpen(!isOpen)}>
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setIsOpen(!isOpen)}
+            >
               {isOpen ? <X size={20} /> : <Menu size={20} />}
             </Button>
           </div>
@@ -85,7 +74,7 @@ const Navigation = () => {
                 <button
                   key={item.href}
                   onClick={() => scrollToSection(item.href)}
-                  className="block w-full text-left px-3 py-2 text-foreground hover:text-primary transition-colors duration-200 font-medium"
+                  className="nav-link block w-full text-left px-3 py-2 text-foreground hover:text-primary transition-all duration-300 font-medium hover:bg-muted/50 rounded-md"
                 >
                   {item.label}
                 </button>

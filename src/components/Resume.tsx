@@ -1,7 +1,9 @@
-import { Download, MapPin, Calendar } from 'lucide-react';
+import { Download, MapPin, Calendar, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const Resume = () => {
+  const { elementRef, isVisible } = useScrollAnimation({ triggerOnce: true });
   const experience = [
     {
       title: 'Backend Developer',

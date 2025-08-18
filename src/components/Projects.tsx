@@ -6,7 +6,10 @@ import project3 from '@/assets/project-3.jpg';
 import project4 from '@/assets/project-4.jpg';
 import project5 from '@/assets/project-5.jpg';
 import project6 from '@/assets/project-6.jpg';
+import { useScrollAnimation, useStaggeredAnimation } from '@/hooks/useScrollAnimation';
 const Projects = () => {
+  const { elementRef: headerRef, isVisible: headerVisible } = useScrollAnimation({ triggerOnce: true });
+  const { containerRef: projectsRef, visibleItems: projectsVisible } = useStaggeredAnimation(3, 200);
   const projects = [
    {
   id: 1,
@@ -61,10 +64,15 @@ const Projects = () => {
 
   ];
 
-  return (
+ return (
     <section id="projects" className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center mb-16">
+        <div 
+          ref={headerRef}
+          className={`max-w-3xl mx-auto text-center mb-16 transition-all duration-800 ${
+            headerVisible ? 'animate-fade-in' : 'opacity-0 translate-y-8'
+          }`}
+        >
           <h2 className="heading-lg mb-6">Featured Projects</h2>
           <p className="body-lg">
             Here are some of my recent projects that showcase my skills in full-stack 
@@ -72,32 +80,41 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-          {projects.map((project) => (
+        <div 
+          ref={projectsRef}
+          className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8"
+        >
+          {projects.map((project, index) => (
             <div 
               key={project.id}
-              className={`surface-elevated overflow-hidden hover:shadow-lg transition-all duration-300 hover:scale-105 ${
+              className={`surface-elevated overflow-hidden hover:shadow-lg transition-all duration-500 hover-lift ${
                 project.featured ? 'lg:col-span-2 xl:col-span-1' : ''
+              } ${
+                projectsVisible[index] ? 'animate-scale-in' : 'opacity-0 scale-90'
               }`}
+              style={{ animationDelay: `${index * 200}ms` }}
             >
-              <div className="relative overflow-hidden">
+              <div className="relative overflow-hidden group">
                 <img 
                   src={project.image} 
                   alt={project.title}
-                  className="w-full h-48 object-cover transition-transform duration-300 hover:scale-110"
+                  className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                  <div className="w-3 h-3 bg-primary rounded-full animate-pulse"></div>
+                </div>
               </div>
               
               <div className="p-6">
-                <h3 className="heading-sm mb-3">{project.title}</h3>
+                <h3 className="heading-sm mb-3 hover:text-primary transition-colors duration-200">{project.title}</h3>
                 <p className="body-md mb-4 text-sm">{project.description}</p>
                 
                 <div className="flex flex-wrap gap-2 mb-6">
-                  {project.technologies.map((tech, index) => (
+                  {project.technologies.map((tech, techIndex) => (
                     <span 
-                      key={index}
-                      className="px-3 py-1 bg-muted rounded-full text-xs font-medium"
+                      key={techIndex}
+                      className="px-3 py-1 bg-muted rounded-full text-xs font-medium hover:bg-primary hover:text-primary-foreground transition-all duration-200 hover-scale"
                     >
                       {tech}
                     </span>
@@ -107,7 +124,7 @@ const Projects = () => {
                 <div className="flex gap-3">
                   <Button 
                     size="sm" 
-                    className="btn-hero flex-1"
+                    className="btn-hero btn-animated flex-1"
                     asChild
                   >
                     <a 
@@ -123,7 +140,7 @@ const Projects = () => {
                   <Button 
                     size="sm" 
                     variant="outline"
-                    className="btn-ghost flex-1"
+                    className="btn-ghost btn-animated flex-1"
                     asChild
                   >
                     <a 

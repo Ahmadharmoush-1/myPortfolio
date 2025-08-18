@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 9,
+            "activePatchIndex": 10,
             "patches": [
                 {
                     "date": 1755433140901,
@@ -44,6 +44,10 @@
                 {
                     "date": 1755433280833,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -72,9 +72,9 @@\n     {\r\n       icon: Linkedin,\r\n       label: 'LinkedIn',\r\n       href: 'https://www.linkedin.com/in/ahmad-harmoush-029806264/',\r\n-      username: 'Alex Johnson'\r\n+      username: 'Ahmad Harmoush'\r\n     }\r\n   ];\r\n \r\n   return (\r\n"
+                },
+                {
+                    "date": 1755522771561,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n import { Button } from '@/components/ui/button';\r\n import { Input } from '@/components/ui/input';\r\n import { Textarea } from '@/components/ui/textarea';\r\n import { useToast } from '@/hooks/use-toast';\r\n+import { useScrollAnimation } from '@/hooks/useScrollAnimation';\r\n \r\n const Contact = () => {\r\n   const { toast } = useToast();\r\n   const [formData, setFormData] = useState({\r\n"
                 }
             ],
             "date": 1755433140901,
