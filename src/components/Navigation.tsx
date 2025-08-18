@@ -38,8 +38,12 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="font-heading font-semibold text-xl">
-            Portfolio
-          </div>
+ <img 
+    src="\public\photos\logo.png" 
+    alt="Ahmad Harmoush Logo" 
+    className="h-[75px] w-[75px] object-cover rounded-full"
+  />
+</div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
