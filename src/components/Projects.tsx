@@ -39,7 +39,7 @@ const Projects = () => {
   technologies: ['Vue.js', 'React Native', 'TypeScript'],
   liveUrl: 'https://babeandbloom.netlify.app/',
   githubUrl: 'https://github.com/Ahmadharmoush-1/babeandbloom',
-  featured: false
+  featured: true
 },
 {
   id: 4,
@@ -49,7 +49,7 @@ const Projects = () => {
   technologies: ['Vue.js', 'React Native', 'TypeScript'],
   liveUrl: 'https://magicdesignn.netlify.app/',
   githubUrl: 'https://github.com/Ahmadharmoush-1/MagicDesign',
-  featured: false
+  featured: true
 },
 {
   id: 5,
@@ -59,7 +59,7 @@ const Projects = () => {
   technologies: ['Vue.js', 'React Native', 'TypeScript'],
   liveUrl: 'https://padell.netlify.app/',
   githubUrl: 'https://github.com/Ahmadharmoush-1/Padel',
-  featured: false
+  featured: true
 }
 
   ];
