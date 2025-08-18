@@ -51,9 +51,9 @@ const Navigation = () => {
               height={65}
               className="rounded-full border border-gray-300 shadow-sm"
             />
-            <span className="font-heading font-semibold text-lg sm:text-xl">
+            {/* <span className="font-heading font-semibold text-lg sm:text-xl">
               Ahmad Harmoush
-            </span>
+            </span> */}
           </div>
 
           {/* Desktop Navigation */}
