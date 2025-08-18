@@ -3,11 +3,23 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 3,
             "patches": [
                 {
                     "date": 1755439618707,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1755517806686,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,10 @@\n   <head>\n     <meta charset=\"UTF-8\" />\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n     <title>AhmadHarmoush-Portfolio</title>\n-    <link rel=\"icon\" type=\"image/png\" href=\"C:\\Users\\GamingCorner\\Desktop\\code\\myportfolio\\public\\photos\\logo.png\" />\n+    <link rel=\"icon\" type=\"image/png\" href=\"\\public\\photos\\logo.png\" />\n+     <link rel=\"icon\" type=\"image/png\" href=\"\\photos\\favicon.ico\" />\n     \n     <!-- Meta Pixel Code -->\n \n   </head>\n"
+                },
+                {
+                    "date": 1755517902915,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n     <meta charset=\"UTF-8\" />\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n     <title>AhmadHarmoush-Portfolio</title>\n     <link rel=\"icon\" type=\"image/png\" href=\"\\public\\photos\\logo.png\" />\n-     <link rel=\"icon\" type=\"image/png\" href=\"\\photos\\favicon.ico\" />\n+     <link rel=\"icon\" type=\"image/png\" href=\"/favicon.png\" />\n     \n     <!-- Meta Pixel Code -->\n \n   </head>\n"
+                },
+                {
+                    "date": 1755517914342,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n     <meta charset=\"UTF-8\" />\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n     <title>AhmadHarmoush-Portfolio</title>\n     <link rel=\"icon\" type=\"image/png\" href=\"\\public\\photos\\logo.png\" />\n-     <link rel=\"icon\" type=\"image/png\" href=\"/favicon.png\" />\n+     <link rel=\"icon\" type=\"image/png\" href=\"C:\\Users\\GamingCorner\\Desktop\\code\\myportfolio\\public\\photos\\image.png\" />\n     \n     <!-- Meta Pixel Code -->\n \n   </head>\n"
                 }
             ],
             "date": 1755439618707,
