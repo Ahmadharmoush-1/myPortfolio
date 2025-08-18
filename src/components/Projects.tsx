@@ -9,7 +9,7 @@ import project6 from '@/assets/project-6.jpg';
 import { useScrollAnimation, useStaggeredAnimation } from '@/hooks/useScrollAnimation';
 const Projects = () => {
   const { elementRef: headerRef, isVisible: headerVisible } = useScrollAnimation({ triggerOnce: true });
-  const { containerRef: projectsRef, visibleItems: projectsVisible } = useStaggeredAnimation(3, 200);
+  const { containerRef: projectsRef, visibleItems: projectsVisible } = useStaggeredAnimation(5, 200);
   const projects = [
    {
   id: 1,
