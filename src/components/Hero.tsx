@@ -24,8 +24,9 @@ const Hero = () => {
        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="animate-fade-up">
           <h1 className="heading-xl mb-6 animate-slide-in-up">
-            Hi, I'm <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent animate-glow">
-              Ahmad Harmoush
+            
+             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent animate-glow">
+              Beirut Web
             </span>
           </h1>
           <h2 className="heading-md mb-8 text-muted-foreground animate-slide-in-up animate-delay-200">

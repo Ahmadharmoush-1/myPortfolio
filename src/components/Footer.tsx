@@ -31,7 +31,7 @@ const Footer = () => {
               onClick={scrollToTop}
               className="font-heading font-semibold text-2xl hover:text-primary transition-all duration-300 hover-scale hover-glow"
             >
-              Ahmad Harmoush
+              Beirut Web
             </button>
             <p className="text-background/70 mt-2">
               Full-Stack Developer

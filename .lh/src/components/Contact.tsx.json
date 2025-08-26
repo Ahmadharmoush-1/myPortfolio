@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 10,
+            "activePatchIndex": 11,
             "patches": [
                 {
                     "date": 1755433140901,
@@ -48,6 +48,10 @@
                 {
                     "date": 1755522771561,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n import { Button } from '@/components/ui/button';\r\n import { Input } from '@/components/ui/input';\r\n import { Textarea } from '@/components/ui/textarea';\r\n import { useToast } from '@/hooks/use-toast';\r\n+import { useScrollAnimation } from '@/hooks/useScrollAnimation';\r\n \r\n const Contact = () => {\r\n   const { toast } = useToast();\r\n   const [formData, setFormData] = useState({\r\n"
+                },
+                {
+                    "date": 1756202940466,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -83,9 +83,9 @@\n       <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\">\r\n         <div className=\"max-w-3xl mx-auto text-center mb-16\">\r\n           <h2 className=\"heading-lg mb-6\">Get In Touch</h2>\r\n           <p className=\"body-lg\">\r\n-            I'm always open to discussing new opportunities, interesting projects, \r\n+            We always open to discussing new opportunities, interesting projects, \r\n             or just having a chat about technology and design.\r\n           </p>\r\n         </div>\r\n \r\n"
                 }
             ],
             "date": 1755433140901,

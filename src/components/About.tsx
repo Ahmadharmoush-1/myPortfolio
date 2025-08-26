@@ -44,9 +44,9 @@ const About = () => {
             headerVisible ? 'animate-fade-in' : 'opacity-0 translate-y-8'
           }`}
         >
-          <h2 className="heading-lg mb-6">About Me</h2>
+          <h2 className="heading-lg mb-6">About Us</h2>
           <p className="body-lg">
-            I'm a passionate developer and designer with over 5 years of experience creating 
+            A passionate developer and designer with over 5 years of experience creating 
             digital solutions that bridge the gap between design and technology. I believe in 
             building products that not only look great but also solve real problems.
           </p>

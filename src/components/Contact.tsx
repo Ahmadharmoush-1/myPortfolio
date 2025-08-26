@@ -84,7 +84,7 @@ const Contact = () => {
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="heading-lg mb-6">Get In Touch</h2>
           <p className="body-lg">
-            I'm always open to discussing new opportunities, interesting projects, 
+            We are always open to discussing new opportunities, interesting projects, 
             or just having a chat about technology and design.
           </p>
         </div>
