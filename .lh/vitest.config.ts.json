@@ -1,0 +1,18 @@
+{
+    "sourceFile": "vitest.config.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1768929063232,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1768929063232,
+            "name": "Commit-0",
+            "content": "import { defineConfig } from \"vitest/config\";\r\nimport react from \"@vitejs/plugin-react-swc\";\r\nimport path from \"path\";\r\n\r\nexport default defineConfig({\r\n  plugins: [react()],\r\n  test: {\r\n    environment: \"jsdom\",\r\n    globals: true,\r\n    setupFiles: [\"./src/test/setup.ts\"],\r\n    include: [\"src/**/*.{test,spec}.{ts,tsx}\"],\r\n  },\r\n  resolve: {\r\n    alias: { \"@\": path.resolve(__dirname, \"./src\") },\r\n  },\r\n});\r\n"
+        }
+    ]
+}

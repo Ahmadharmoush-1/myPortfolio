@@ -1,178 +1,208 @@
-import { ExternalLink, Github } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import project1 from '@/assets/project-1.jpg';
-import project2 from '@/assets/project-2.jpg';
-import project3 from '@/assets/project-3.jpg';
-import project4 from '@/assets/project-4.jpg';
-import project5 from '@/assets/project-5.jpg';
-import project6 from '@/assets/project-6.jpg';
-import { useScrollAnimation, useStaggeredAnimation } from '@/hooks/useScrollAnimation';
+import { useState } from "react";
+import { ExternalLink, ArrowUpRight } from "lucide-react";
+import project1 from "@/assets/project-1.jpg";
+import project2 from "@/assets/project-2.jpg";
+import project3 from "@/assets/project-3.jpg";
+import project4 from "@/assets/project-4.jpg";
+import project5 from "@/assets/project-5.jpg";
+import project6 from "@/assets/project-6.jpg";
+
+const categories = ["All", "E-Commerce", "Corporate", "Healthcare", "Portfolio"];
+
+const projects = [
+  {
+    id: 1,
+    title: "Luxe Commerce",
+    subtitle: "Premium E-Commerce Platform",
+    description: "A sophisticated online marketplace with seamless checkout and personalized shopping experiences.",
+    category: "E-Commerce",
+    image: project1,
+    link: "https://shopify.com",
+    year: "2024",
+  },
+  {
+    id: 2,
+    title: "DataVision Pro",
+    subtitle: "Enterprise Analytics Suite",
+    description: "Corporate intelligence dashboard with real-time analytics and executive reporting.",
+    category: "Corporate",
+    image: project2,
+    link: "https://tableau.com",
+    year: "2024",
+  },
+  {
+    id: 3,
+    title: "Gastronome",
+    subtitle: "Fine Dining Experience",
+    description: "Elegant restaurant platform with table reservations and curated menu presentations.",
+    category: "Portfolio",
+    image: project3,
+    link: "https://opentable.com",
+    year: "2023",
+  },
+  {
+    id: 4,
+    title: "Prime Estates",
+    subtitle: "Luxury Real Estate",
+    description: "High-end property platform with immersive virtual tours and premium listings.",
+    category: "Corporate",
+    image: project4,
+    link: "https://zillow.com",
+    year: "2023",
+  },
+  {
+    id: 5,
+    title: "MedCare Plus",
+    subtitle: "Healthcare Excellence",
+    description: "Patient-centric medical portal with appointment scheduling and telehealth integration.",
+    category: "Healthcare",
+    image: project5,
+    link: "https://zocdoc.com",
+    year: "2024",
+  },
+  {
+    id: 6,
+    title: "Artistry Studio",
+    subtitle: "Creative Agency Portfolio",
+    description: "Award-winning creative showcase with immersive project presentations.",
+    category: "Portfolio",
+    image: project6,
+    link: "https://dribbble.com",
+    year: "2024",
+  },
+];
+
 const Projects = () => {
-  const { elementRef: headerRef, isVisible: headerVisible } = useScrollAnimation({ triggerOnce: true });
-  const { containerRef: projectsRef, visibleItems: projectsVisible } = useStaggeredAnimation(5, 200);
-  const projects = [
-   {
-  id: 1,
-  title: 'World Of Perfume - Fragrance E-commerce',
-  description: 'A complete fragrance e-commerce platform featuring product catalog, advanced filtering, and a modern shopping experience.',
-  image: project2,
-  technologies: ['React', 'TypeScript', 'Tailwind CSS'],
-  liveUrl: 'https://worldofperfume.store/',
-  githubUrl: 'https://github.com/Ahmadharmoush-1/WorldofPerfume',
-  featured: true
-},
-{
-  id: 2,
-  title: 'TheNosh - Restaurant Web App',
-  description: 'A restaurant website with online menu display, table reservations, and a seamless user experience.',
-  image: project1,
-  technologies: ['React Native', 'TypeScript'],
-  liveUrl: 'https://www.thenoshrealfood.com/',
-  githubUrl: 'https://github.com/Ahmadharmoush-1/TheNosh',
-  featured: true
-},
-{
-  id: 3,
-  title: 'BabeAndBloom',
-  description: 'An elegant e-commerce platform for baby and beauty products, showcasing a clean design and smooth shopping experience.',
-  image: project4,
-  technologies: ['Vue.js', 'React Native', 'TypeScript'],
-  liveUrl: 'https://babeandbloom.netlify.app/',
-  githubUrl: 'https://github.com/Ahmadharmoush-1/babeandbloom',
-  featured: true
-},
-{
-  id: 4,
-  title: 'MagicDesign - Aluminum Portfolio',
-  description: 'A professional portfolio website for an aluminum design business, highlighting projects and services in a modern layout.',
-  image: project5,
-  technologies: ['Vue.js', 'React Native', 'TypeScript'],
-  liveUrl: 'https://magicdesignn.netlify.app/',
-  githubUrl: 'https://github.com/Ahmadharmoush-1/MagicDesign',
-  featured: true
-},
-{
-  id: 5,
-  title: 'Padel',
-  description: 'A padel court website featuring reservations, club details, and a modern sports design.',
-  image: project6,
-  technologies: ['Vue.js', 'React Native', 'TypeScript'],
-  liveUrl: 'https://padell.netlify.app/',
-  githubUrl: 'https://github.com/Ahmadharmoush-1/Padel',
-  featured: true
-}
+  const [activeCategory, setActiveCategory] = useState("All");
+  const [hoveredProject, setHoveredProject] = useState<number | null>(null);
 
-  ];
+  const filteredProjects =
+    activeCategory === "All"
+      ? projects
+      : projects.filter((p) => p.category === activeCategory);
 
- return (
-    <section id="projects" className="py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div 
-          ref={headerRef}
-          className={`max-w-3xl mx-auto text-center mb-16 transition-all duration-800 ${
-            headerVisible ? 'animate-fade-in' : 'opacity-0 translate-y-8'
-          }`}
-        >
-          <h2 className="heading-lg mb-6">Featured Projects</h2>
-          <p className="body-lg">
-            Here are some of my recent projects that showcase my skills in full-stack 
-            development, design, and problem-solving.
+  return (
+    <section id="projects" className="section-padding bg-background">
+      <div className="container-custom">
+        {/* Header */}
+        <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
+          <span className="inline-block text-primary font-semibold text-sm uppercase tracking-widest mb-4">
+            Our Portfolio
+          </span>
+          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+            Featured <span className="text-gradient">Projects</span>
+          </h2>
+          <p className="text-muted-foreground text-lg lg:text-xl leading-relaxed">
+            Discover our collection of meticulously crafted digital experiences
+            that have helped businesses achieve remarkable success.
           </p>
         </div>
 
-        <div 
-          ref={projectsRef}
-          className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8"
-        >
-          {projects.map((project, index) => (
-            <div 
-              key={project.id}
-              className={`surface-elevated overflow-hidden hover:shadow-lg transition-all duration-500 hover-lift ${
-                project.featured ? 'lg:col-span-2 xl:col-span-1' : ''
-              } ${
-                projectsVisible[index] ? 'animate-scale-in' : 'opacity-0 scale-90'
+        {/* Filter Buttons */}
+        <div className="flex flex-wrap justify-center gap-3 mb-14 lg:mb-16">
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => setActiveCategory(category)}
+              className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-500 ${
+                activeCategory === category
+                  ? "bg-foreground text-background shadow-xl"
+                  : "bg-secondary text-muted-foreground hover:bg-secondary/80 hover:text-foreground"
               }`}
-              style={{ animationDelay: `${index * 200}ms` }}
             >
-              <div className="relative overflow-hidden group">
-                <img 
-                  src={project.image} 
-                  alt={project.title}
-                  className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                  <div className="w-3 h-3 bg-primary rounded-full animate-pulse"></div>
-                </div>
-              </div>
-              
-              <div className="p-6">
-                <h3 className="heading-sm mb-3 hover:text-primary transition-colors duration-200">{project.title}</h3>
-                <p className="body-md mb-4 text-sm">{project.description}</p>
-                
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {project.technologies.map((tech, techIndex) => (
-                    <span 
-                      key={techIndex}
-                      className="px-3 py-1 bg-muted rounded-full text-xs font-medium hover:bg-primary hover:text-primary-foreground transition-all duration-200 hover-scale"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-                
-                <div className="flex gap-3">
-                  <Button 
-                    size="sm" 
-                    className="btn-hero btn-animated flex-1"
-                    asChild
-                  >
-                    <a 
-                      href={project.liveUrl} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-2"
-                    >
-                      <ExternalLink size={16} />
-                      Live Demo
-                    </a>
-                  </Button>
-                  <Button 
-                    size="sm" 
-                    variant="outline"
-                    className="btn-ghost btn-animated flex-1"
-                    asChild
-                  >
-                    <a 
-                      href={project.githubUrl} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-2"
-                    >
-                      <Github size={16} />
-                      Code
-                    </a>
-                  </Button>
-                </div>
-              </div>
-            </div>
+              {category}
+            </button>
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <Button 
-            variant="outline"
-            className="btn-ghost"
-            asChild
-          >
-            <a 
-              href="https://github.com/Ahmadharmoush-1/" 
-              target="_blank" 
+        {/* Projects Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+          {filteredProjects.map((project, index) => (
+            <a
+              key={project.id}
+              href={project.link}
+              target="_blank"
               rel="noopener noreferrer"
+              className="group luxury-card cursor-pointer"
+              onMouseEnter={() => setHoveredProject(project.id)}
+              onMouseLeave={() => setHoveredProject(null)}
+              style={{ 
+                opacity: 0,
+                animation: `fade-in-up 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards`,
+                animationDelay: `${index * 100}ms` 
+              }}
             >
-              View All Projects on GitHub
+              {/* Image Container */}
+              <div className="relative aspect-[4/3] overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover img-zoom"
+                />
+                
+                {/* Overlay Gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/90 via-foreground/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
+                
+                {/* Year Badge */}
+                <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-background/90 backdrop-blur-sm text-xs font-medium text-foreground opacity-0 group-hover:opacity-100 transition-all duration-500 transform -translate-y-2 group-hover:translate-y-0">
+                  {project.year}
+                </div>
+
+                {/* External Link Icon */}
+                <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-primary flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0 shadow-blue">
+                  <ArrowUpRight className="w-5 h-5 text-primary-foreground" />
+                </div>
+
+                {/* Bottom Content Overlay */}
+                <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out">
+                  <span className="inline-block px-3 py-1 rounded-full bg-primary/90 text-primary-foreground text-xs font-medium mb-3">
+                    {project.category}
+                  </span>
+                  <p className="text-background/90 text-sm line-clamp-2">
+                    {project.description}
+                  </p>
+                </div>
+              </div>
+
+              {/* Card Content */}
+              <div className="p-6 bg-card">
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <h3 className="font-display text-xl font-bold text-foreground mb-1 group-hover:text-primary transition-colors duration-300">
+                      {project.title}
+                    </h3>
+                    <p className="text-muted-foreground text-sm">
+                      {project.subtitle}
+                    </p>
+                  </div>
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full border-2 border-border flex items-center justify-center group-hover:border-primary group-hover:bg-primary transition-all duration-300">
+                    <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary-foreground transition-colors duration-300" />
+                  </div>
+                </div>
+              </div>
+
+              {/* Bottom Border Animation */}
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
             </a>
-          </Button>
+          ))}
+        </div>
+
+        {/* Bottom CTA */}
+        <div className="text-center mt-16 lg:mt-20">
+          <p className="text-muted-foreground mb-6">
+            Interested in seeing more of our work?
+          </p>
+          <a
+            href="#contact"
+            onClick={(e) => {
+              e.preventDefault();
+              document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-4 transition-all duration-300"
+          >
+            Let's discuss your project
+            <ArrowUpRight className="w-5 h-5" />
+          </a>
         </div>
       </div>
     </section>

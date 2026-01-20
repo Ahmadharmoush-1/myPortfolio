@@ -1,93 +1,133 @@
-import { Button } from '@/components/ui/button';
-import { ChevronDown, Github, Linkedin, Mail } from 'lucide-react';
-import heroBg from '@/assets/hero-bg.jpg';
+import { ArrowRight, ChevronDown, Sparkles } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import heroBg from "@/assets/hero-bg.jpg";
+import logo from "@/assets/beirutweb-logo.png";
 
 const Hero = () => {
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+    >
       {/* Background */}
-     <div
-  className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-  style={{ backgroundImage: "url('/photos/portfolio.jpg')" }}
-/>
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-gradient-to-br from-background via-background/98 to-beirut-blue-light z-10" />
+        <img
+          src={heroBg}
+          alt=""
+          className="w-full h-full object-cover opacity-20"
+        />
+      </div>
 
-      <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-background/60 to-background/40" />
+      {/* Decorative Elements */}
+      <div className="absolute top-1/4 left-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] animate-float-slow" />
+      <div className="absolute bottom-1/4 right-0 w-[600px] h-[600px] bg-primary/3 rounded-full blur-[120px] animate-float-slow animation-delay-500" />
       
+      {/* Subtle Grid Pattern */}
+      <div 
+        className="absolute inset-0 z-0 opacity-[0.02]"
+        style={{
+          backgroundImage: `linear-gradient(hsl(var(--foreground)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--foreground)) 1px, transparent 1px)`,
+          backgroundSize: '60px 60px'
+        }}
+      />
+
       {/* Content */}
-       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="animate-fade-up">
-          <h1 className="heading-xl mb-6 animate-slide-in-up">
-            
-             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent animate-glow">
-              Beirut Web
-            </span>
+      <div className="relative z-20 container-custom px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-5xl mx-auto">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-foreground/5 backdrop-blur-sm border border-border/50 text-sm font-medium mb-10 animate-fade-in">
+            <Sparkles className="w-4 h-4 text-primary" />
+            <span className="text-foreground">Premium Web Development Agency</span>
+          </div>
+
+          {/* Main Heading */}
+          <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-foreground leading-[1.1] mb-8 animate-fade-in-up">
+            We Craft{" "}
+            <span className="text-gradient">Digital</span>
+            <br />
+            <span className="font-serif italic font-normal">Excellence</span>
           </h1>
-          <h2 className="heading-md mb-8 text-muted-foreground animate-slide-in-up animate-delay-200">
-            Full-Stack Developer
-          </h2>
-          <p className="body-lg mb-12 max-w-2xl mx-auto animate-fade-in animate-delay-400">
-            I craft digital experiences that blend beautiful design with powerful functionality. 
-            Passionate about creating solutions that make a difference.
+
+          {/* Subheading */}
+          <p className="text-lg sm:text-xl lg:text-2xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed animate-fade-in-up animation-delay-200">
+            Beirut Web delivers world-class websites and digital solutions
+            that elevate brands and drive exceptional business results.
           </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-scale-in animate-delay-600">
-            <Button 
-              className="btn-hero btn-animated hover-lift"
-              onClick={() => scrollToSection('#projects')}
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-5 animate-fade-in-up animation-delay-300">
+            <Button
+              variant="secondary"
+              size="lg"
+              onClick={() => scrollToSection("#projects")}
+              className="group btn-glow min-w-[200px]"
             >
-              View My Work
+              View Our Work
+              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
             </Button>
-            <Button 
-              variant="outline"
-              className="btn-ghost btn-animated hover-lift"
-              onClick={() => scrollToSection('#contact')}
+            <Button
+              variant="secondary"
+              size="lg"
+              onClick={() => scrollToSection("#contact")}
+              className="min-w-[200px]"
             >
-              Get In Touch
+              Start a Project
             </Button>
           </div>
-          
-          
-          {/* Social Links */}
-            <div className="flex justify-center gap-6 mb-16 animate-fade-in animate-delay-300">
-            <a 
-              href="https://github.com/Ahmadharmoush-1/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-               className="p-3 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover-scale hover-glow"
-            >
-              <Github size={20} />
-            </a>
-            <a 
-              href="https://www.linkedin.com/in/ahmad-harmoush-029806264/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="p-3 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover-scale hover-glow animate-delay-100"
-            >
-              <Linkedin size={20} />
-            </a>
-            <a 
-              href="mailto:ahmadharmoush74@gmail.com"
-               className="p-3 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover-scale hover-glow animate-delay-200"
-            >
-              <Mail size={20} />
-            </a>
+
+          {/* Trust Indicators */}
+          <div className="mt-20 lg:mt-24 animate-fade-in-up animation-delay-400">
+            <p className="text-sm text-muted-foreground uppercase tracking-widest mb-8">
+              Trusted by Industry Leaders
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-12 lg:gap-16 opacity-60">
+              {["Startup", "Enterprise", "E-Commerce", "Healthcare", "Finance"].map((client, i) => (
+                <div 
+                  key={client}
+                  className="text-foreground/40 font-display font-semibold text-lg tracking-wide hover:text-foreground/60 transition-colors duration-300"
+                >
+                  {client}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Stats */}
+          <div className="grid grid-cols-3 gap-8 lg:gap-16 max-w-2xl mx-auto mt-20 lg:mt-24 animate-fade-in-up animation-delay-500">
+            {[
+              { value: "50+", label: "Projects Delivered" },
+              { value: "30+", label: "Happy Clients" },
+              { value: "5+", label: "Years Excellence" },
+            ].map((stat) => (
+              <div key={stat.label} className="text-center">
+                <div className="text-4xl sm:text-5xl lg:text-6xl font-bold font-display text-foreground mb-2">
+                  {stat.value}
+                </div>
+                <div className="text-sm text-muted-foreground">{stat.label}</div>
+              </div>
+            ))}
           </div>
         </div>
-        
+
         {/* Scroll Indicator */}
-        <button 
-          onClick={() => scrollToSection('#about')}
-           className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-subtle hover-scale transition-all duration-300"
-        >
-          <ChevronDown size={24} className="text-muted-foreground hover:text-primary" />
-        </button>
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
+          <button
+            onClick={() => scrollToSection("#about")}
+            className="group flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors duration-300"
+            aria-label="Scroll down"
+          >
+            <span className="text-xs uppercase tracking-widest">Scroll</span>
+            <ChevronDown size={24} className="animate-bounce" />
+          </button>
+        </div>
       </div>
     </section>
   );

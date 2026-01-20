@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 3,
+            "activePatchIndex": 4,
             "patches": [
                 {
                     "date": 1755439618707,
@@ -20,6 +20,10 @@
                 {
                     "date": 1755517914342,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n     <meta charset=\"UTF-8\" />\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n     <title>AhmadHarmoush-Portfolio</title>\n     <link rel=\"icon\" type=\"image/png\" href=\"\\public\\photos\\logo.png\" />\n-     <link rel=\"icon\" type=\"image/png\" href=\"/favicon.png\" />\n+     <link rel=\"icon\" type=\"image/png\" href=\"C:\\Users\\GamingCorner\\Desktop\\code\\myportfolio\\public\\photos\\image.png\" />\n     \n     <!-- Meta Pixel Code -->\n \n   </head>\n"
+                },
+                {
+                    "date": 1768928806032,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,16 +2,23 @@\n <html lang=\"en\">\n   <head>\n     <meta charset=\"UTF-8\" />\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n-    <title>AhmadHarmoush-Portfolio</title>\n-    <link rel=\"icon\" type=\"image/png\" href=\"\\public\\photos\\logo.png\" />\n-     <link rel=\"icon\" type=\"image/png\" href=\"C:\\Users\\GamingCorner\\Desktop\\code\\myportfolio\\public\\photos\\image.png\" />\n+    <title>Beirut Web | Professional Web Development Agency</title>\n+    <meta name=\"description\" content=\"Beirut Web creates stunning, high-performance websites and digital solutions. Custom web development, UI/UX design, and SEO optimization for businesses worldwide.\" />\n+    <meta name=\"keywords\" content=\"web development, web design, Beirut, Lebanon, digital agency, SEO, UI/UX\" />\n+    <meta name=\"author\" content=\"Beirut Web\" />\n     \n-    <!-- Meta Pixel Code -->\n-\n+    <meta property=\"og:type\" content=\"website\" />\n+    <meta property=\"og:title\" content=\"Beirut Web | Professional Web Development Agency\" />\n+    <meta property=\"og:description\" content=\"Creating exceptional digital experiences for businesses worldwide.\" />\n+    \n+    <meta name=\"twitter:card\" content=\"summary_large_image\" />\n+    <meta name=\"twitter:title\" content=\"Beirut Web | Professional Web Development Agency\" />\n+    <meta name=\"twitter:description\" content=\"Creating exceptional digital experiences for businesses worldwide.\" />\n+    \n+    <link rel=\"icon\" type=\"image/x-icon\" href=\"/favicon.ico\" />\n   </head>\n-\n   <body>\n     <div id=\"root\"></div>\n     <script type=\"module\" src=\"/src/main.tsx\"></script>\n   </body>\n"
                 }
             ],
             "date": 1755439618707,

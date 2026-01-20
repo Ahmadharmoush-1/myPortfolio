@@ -1,108 +1,108 @@
-import { Code, Palette, Zap, Users } from 'lucide-react';
-import { useScrollAnimation, useStaggeredAnimation } from '@/hooks/useScrollAnimation';
+import { CheckCircle2, Award, Users, Clock } from "lucide-react";
+import aboutGraphic from "@/assets/about-graphic.jpg";
+
+const features = [
+  "Custom Web Development",
+  "Responsive Design",
+  "SEO Optimization",
+  "Performance Focused",
+  "Modern Technologies",
+  "Ongoing Support",
+];
+
+const stats = [
+  { icon: Award, value: "5+", label: "Years Excellence" },
+  { icon: Users, value: "30+", label: "Happy Clients" },
+  { icon: Clock, value: "100%", label: "On-Time Delivery" },
+];
 
 const About = () => {
-  const { elementRef: headerRef, isVisible: headerVisible } = useScrollAnimation({ triggerOnce: true });
-  const { containerRef: skillsRef, visibleItems: skillsVisible } = useStaggeredAnimation(4, 150);
-  const { elementRef: statsRef, isVisible: statsVisible } = useScrollAnimation({ triggerOnce: true, threshold: 0.3 });
-  
-
-
-  const skills = [
-    {
-      icon: Code,
-      title: 'Development',
-      description: 'Full-stack development with modern technologies like React, Node.js, and TypeScript.',
-      technologies: ['React', 'Node.js', 'TypeScript', 'Python', 'PostgreSQL']
-    },
-    {
-      icon: Palette,
-      title: 'Design',
-      description: 'Creating beautiful, user-centered designs that enhance the digital experience.',
-      technologies: ['Figma', 'Adobe Creative Suite', 'Prototyping', 'User Research']
-    },
-    {
-      icon: Zap,
-      title: 'Performance',
-      description: 'Optimizing applications for speed, scalability, and exceptional user experience.',
-      technologies: ['Performance Optimization', 'SEO', 'Analytics', 'Testing']
-    },
-    {
-      icon: Users,
-      title: 'Collaboration',
-      description: 'Working effectively with teams to deliver projects on time and exceed expectations.',
-      technologies: ['Agile', 'Project Management', 'Code Review', 'Mentoring']
-    }
-  ];
-
- return (
-    <section id="about" className="py-20 bg-muted/30">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div 
-          ref={headerRef}
-          className={`max-w-3xl mx-auto text-center mb-16 transition-all duration-800 ${
-            headerVisible ? 'animate-fade-in' : 'opacity-0 translate-y-8'
-          }`}
-        >
-          <h2 className="heading-lg mb-6">About Us</h2>
-          <p className="body-lg">
-            A passionate developer and designer with over 5 years of experience creating 
-            digital solutions that bridge the gap between design and technology. I believe in 
-            building products that not only look great but also solve real problems.
-          </p>
-        </div>
-
-        <div 
-          ref={skillsRef}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16"
-        >
-          {skills.map((skill, index) => (
-            <div 
-              key={index}
-              className={`surface-elevated p-6 text-center hover:shadow-lg transition-all duration-500 hover-lift hover-scale ${
-                skillsVisible[index] ? 'animate-scale-in' : 'opacity-0 scale-90'
-              }`}
-              style={{ animationDelay: `${index * 150}ms` }}
-            >
-              <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center mx-auto mb-4 animate-float">
-                <skill.icon size={24} className="text-white" />
-              </div>
-              <h3 className="heading-sm mb-3">{skill.title}</h3>
-              <p className="body-md mb-4 text-sm">{skill.description}</p>
-              <div className="flex flex-wrap gap-2 justify-center">
-                {skill.technologies.map((tech, techIndex) => (
-                  <span 
-                    key={techIndex}
-                    className="px-2 py-1 bg-muted rounded-md text-xs font-medium hover:bg-primary hover:text-primary-foreground transition-colors duration-200"
-                  >
-                    {tech}
-                  </span>
-                ))}
+  return (
+    <section id="about" className="section-padding bg-gradient-hero overflow-hidden">
+      <div className="container-custom">
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+          {/* Image */}
+          <div className="relative animate-slide-in-left">
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+              <img
+                src={aboutGraphic}
+                alt="Digital Innovation"
+                className="w-full h-auto object-cover"
+              />
+              {/* Decorative overlay */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent" />
+            </div>
+            
+            {/* Floating Stats Card */}
+            <div className="absolute -bottom-8 -right-8 lg:-right-12 bg-card p-6 lg:p-8 rounded-2xl shadow-2xl border border-border/50 animate-float">
+              <div className="flex items-center gap-4">
+                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center">
+                  <Award className="w-7 h-7 text-primary" />
+                </div>
+                <div>
+                  <div className="text-3xl lg:text-4xl font-bold font-display text-foreground">5+</div>
+                  <div className="text-sm text-muted-foreground">Years of Excellence</div>
+                </div>
               </div>
             </div>
-          ))}
-        </div>
 
-        <div 
-          ref={statsRef}
-          className={`max-w-4xl mx-auto transition-all duration-800 ${
-            statsVisible ? 'animate-slide-in-up' : 'opacity-0 translate-y-8'
-          }`}
-        >
-          <div className="surface-elevated p-8 md:p-12 hover-lift">
-            <div className="grid md:grid-cols-3 gap-8 text-center">
-              <div className="hover-scale transition-transform duration-300">
-                <h3 className="heading-md mb-2 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">50+</h3>
-                <p className="body-md">Projects Completed</p>
-              </div>
-              <div className="hover-scale transition-transform duration-300">
-                <h3 className="heading-md mb-2 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">5+</h3>
-                <p className="body-md">Years Experience</p>
-              </div>
-              <div className="hover-scale transition-transform duration-300">
-                <h3 className="heading-md mb-2 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">25+</h3>
-                <p className="body-md">Happy Clients</p>
-              </div>
+            {/* Decorative Element */}
+            <div className="absolute -top-6 -left-6 w-24 h-24 rounded-full border-2 border-primary/20 animate-pulse-glow" />
+          </div>
+
+          {/* Content */}
+          <div className="animate-slide-in-right">
+            <span className="inline-block text-primary font-semibold text-sm uppercase tracking-widest mb-4">
+              About Us
+            </span>
+            <h2 className="font-display text-4xl sm:text-5xl font-bold text-foreground mb-6 leading-tight">
+              Crafting Digital
+              <br />
+              <span className="text-gradient">Excellence</span> Since 2019
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              Beirut Web is a premier web development agency committed to
+              delivering exceptional digital experiences. We seamlessly blend
+              creativity, cutting-edge technology, and strategic insight to
+              build websites that captivate and convert.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-10">
+              Our team of distinguished developers, designers, and strategists
+              collaborate to deliver solutions that consistently exceed
+              expectations. From ambitious startups to established enterprises,
+              we partner with visionary businesses to bring their digital
+              aspirations to life.
+            </p>
+
+            {/* Features Grid */}
+            <div className="grid sm:grid-cols-2 gap-4 mb-10">
+              {features.map((feature, index) => (
+                <div
+                  key={feature}
+                  className="flex items-center gap-3 p-4 rounded-xl bg-card border border-border/50 hover:border-primary/30 hover:shadow-md transition-all duration-300"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <CheckCircle2 className="w-4 h-4 text-primary" />
+                  </div>
+                  <span className="text-foreground font-medium">{feature}</span>
+                </div>
+              ))}
+            </div>
+
+            {/* Mini Stats */}
+            <div className="flex flex-wrap gap-6 lg:gap-10">
+              {stats.map((stat) => (
+                <div key={stat.label} className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-xl bg-primary/5 flex items-center justify-center">
+                    <stat.icon className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold font-display text-foreground">{stat.value}</div>
+                    <div className="text-xs text-muted-foreground">{stat.label}</div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>

@@ -3,11 +3,15 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 1,
             "patches": [
                 {
                     "date": 1755431796968,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1768928730984,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,27 @@\n+import { Toaster } from \"@/components/ui/toaster\";\n+import { Toaster as Sonner } from \"@/components/ui/sonner\";\n+import { TooltipProvider } from \"@/components/ui/tooltip\";\n+import { QueryClient, QueryClientProvider } from \"@tanstack/react-query\";\n+import { BrowserRouter, Routes, Route } from \"react-router-dom\";\n+import Index from \"./pages/Index\";\n+import NotFound from \"./pages/NotFound\";\n+\n+const queryClient = new QueryClient();\n+\n+const App = () => (\n+  <QueryClientProvider client={queryClient}>\n+    <TooltipProvider>\n+      <Toaster />\n+      <Sonner />\n+      <BrowserRouter>\n+        <Routes>\n+          <Route path=\"/\" element={<Index />} />\n+          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL \"*\" ROUTE */}\n+          <Route path=\"*\" element={<NotFound />} />\n+        </Routes>\n+      </BrowserRouter>\n+    </TooltipProvider>\n+  </QueryClientProvider>\n+);\n+\n+export default App;\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1755431796968,

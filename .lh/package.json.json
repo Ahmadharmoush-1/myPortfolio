@@ -3,11 +3,15 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 1,
             "patches": [
                 {
                     "date": 1755431837406,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1768928817116,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,11 @@\n     \"dev\": \"vite\",\n     \"build\": \"vite build\",\n     \"build:dev\": \"vite build --mode development\",\n     \"lint\": \"eslint .\",\n-    \"preview\": \"vite preview\"\n+    \"preview\": \"vite preview\",\n+    \"test\": \"vitest run\",\n+    \"test:watch\": \"vitest\"\n   },\n   \"dependencies\": {\n     \"@hookform/resolvers\": \"^3.10.0\",\n     \"@radix-ui/react-accordion\": \"^1.2.11\",\n@@ -62,8 +64,10 @@\n     \"zod\": \"^3.25.76\"\n   },\n   \"devDependencies\": {\n     \"@eslint/js\": \"^9.32.0\",\n+    \"@testing-library/jest-dom\": \"^6.6.0\",\n+    \"@testing-library/react\": \"^16.0.0\",\n     \"@tailwindcss/typography\": \"^0.5.16\",\n     \"@types/node\": \"^22.16.5\",\n     \"@types/react\": \"^18.3.23\",\n     \"@types/react-dom\": \"^18.3.7\",\n@@ -72,12 +76,14 @@\n     \"eslint\": \"^9.32.0\",\n     \"eslint-plugin-react-hooks\": \"^5.2.0\",\n     \"eslint-plugin-react-refresh\": \"^0.4.20\",\n     \"globals\": \"^15.15.0\",\n-    \"lovable-tagger\": \"^1.1.9\",\n+    \"jsdom\": \"^20.0.3\",\n+    \"lovable-tagger\": \"^1.1.13\",\n     \"postcss\": \"^8.5.6\",\n     \"tailwindcss\": \"^3.4.17\",\n     \"typescript\": \"^5.8.3\",\n     \"typescript-eslint\": \"^8.38.0\",\n-    \"vite\": \"^5.4.19\"\n+    \"vite\": \"^5.4.19\",\n+    \"vitest\": \"^3.2.4\"\n   }\n }\n"
                 }
             ],
             "date": 1755431837406,

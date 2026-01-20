@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 3,
+            "activePatchIndex": 5,
             "patches": [
                 {
                     "date": 1755431637581,
@@ -20,6 +20,14 @@
                 {
                     "date": 1755431777090,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,18 +1,22 @@\n-import HeroSection from \"@/components/Hero\";\r\n-import AboutSection from \"@/components/About\";\r\n-import ServicesSection from \"@/components/ServicesSection\";\r\n-import PortfolioSection from \"@/components/PortfolioSection\";\r\n-import ContactSection from \"@/components/Contact\";\r\n+import Navigation from '@/components/Navigation';\r\n+import Hero from '@/components/Hero';\r\n+import About from '@/components/About';\r\n+import Projects from '@/components/Projects';\r\n+import Resume from '@/components/Resume';\r\n+import Contact from '@/components/Contact';\r\n+import Footer from '@/components/Footer';\r\n \r\n const Index = () => {\r\n   return (\r\n     <div className=\"min-h-screen\">\r\n-      <HeroSection />\r\n-      <AboutSection />\r\n-      <ServicesSection />\r\n-      <PortfolioSection />\r\n-      <ContactSection />\r\n+      <Navigation />\r\n+      <Hero />\r\n+      <About />\r\n+      <Projects />\r\n+      <Resume />\r\n+      <Contact />\r\n+      <Footer />\r\n     </div>\r\n   );\r\n };\r\n \r\n"
+                },
+                {
+                    "date": 1768928602710,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import Navigation from '@/components/Navigation';\r\n+import Navigation from '@/components/NavLink';\r\n import Hero from '@/components/Hero';\r\n import About from '@/components/About';\r\n import Projects from '@/components/Projects';\r\n import Resume from '@/components/Resume';\r\n"
+                },
+                {
+                    "date": 1768928664105,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,21 +1,23 @@\n-import Navigation from '@/components/NavLink';\r\n-import Hero from '@/components/Hero';\r\n-import About from '@/components/About';\r\n-import Projects from '@/components/Projects';\r\n-import Resume from '@/components/Resume';\r\n-import Contact from '@/components/Contact';\r\n-import Footer from '@/components/Footer';\r\n+import Header from \"@/components/Header\";\r\n+import Hero from \"@/components/Hero\";\r\n+import About from \"@/components/About\";\r\n+import Projects from \"@/components/Projects\";\r\n+import Services from \"@/components/Services\";\r\n+import Contact from \"@/components/Contact\";\r\n+import Footer from \"@/components/Footer\";\r\n \r\n const Index = () => {\r\n   return (\r\n-    <div className=\"min-h-screen\">\r\n-      <Navigation />\r\n-      <Hero />\r\n-      <About />\r\n-      <Projects />\r\n-      <Resume />\r\n-      <Contact />\r\n+    <div className=\"min-h-screen bg-background\">\r\n+      <Header />\r\n+      <main>\r\n+        <Hero />\r\n+        <About />\r\n+        <Projects />\r\n+        <Services />\r\n+        <Contact />\r\n+      </main>\r\n       <Footer />\r\n     </div>\r\n   );\r\n };\r\n"
                 }
             ],
             "date": 1755431637581,
