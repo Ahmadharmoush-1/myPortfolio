@@ -9,14 +9,14 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "hello@beirutweb.com",
-    href: "mailto:hello@beirutweb.com",
+    value: "beirutwebb@gmail.com",
+    href: "mailto:beirutwebb@gmail.com",
   },
   {
     icon: Phone,
     label: "Phone",
-    value: "+961 1 234 567",
-    href: "tel:+9611234567",
+    value: "+961 78 841 832",
+    href: "tel:+96178841832",
   },
   {
     icon: MapPin,
@@ -29,8 +29,8 @@ const contactInfo = [
 const socialLinks = [
   { name: "Facebook", initial: "Fb", href: "https://facebook.com" },
   { name: "Twitter", initial: "X", href: "https://twitter.com" },
-  { name: "LinkedIn", initial: "Li", href: "https://linkedin.com" },
-  { name: "Instagram", initial: "Ig", href: "https://instagram.com" },
+  { name: "LinkedIn", initial: "Li", href: "https://www.linkedin.com/in/beirut-web-9406753a7/" },
+  { name: "Instagram", initial: "Ig", href: "https://www.instagram.com/beirut.web/" },
 ];
 
 const Contact = () => {
