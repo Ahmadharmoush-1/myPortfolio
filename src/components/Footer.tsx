@@ -17,8 +17,8 @@ const footerLinks = {
   social: [
     { name: "Facebook", href: "https://facebook.com" },
     { name: "Twitter", href: "https://twitter.com" },
-    { name: "LinkedIn", href: "https://linkedin.com" },
-    { name: "Instagram", href: "https://instagram.com" },
+    { name: "LinkedIn", href: "https://www.linkedin.com/in/beirut-web-9406753a7/" },
+    { name: "Instagram", href: "https://www.instagram.com/beirut.web/" },
   ],
 };
 
@@ -44,7 +44,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
             <img
-              src={logo}
+              src="/photos/logo.png"
               alt="Beirut Web"
               className="h-10 w-auto mb-6 brightness-0 invert"
             />
